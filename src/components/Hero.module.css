@@ -1,0 +1,296 @@
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #f8fafc, #e0e7ff, #e0f2fe);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 40, 0.32);
+  z-index: 2;
+  pointer-events: none;
+}
+
+:global(.dark) .heroSection {
+  background: linear-gradient(to bottom right, #111827, #1e3a8a, #312e81);
+}
+
+:global(.dark) .heroOverlay {
+  background: rgba(10, 10, 30, 0.48);
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 0 0.5rem;
+  }
+  .heroSection {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.icon {
+  padding: 1.1rem;
+  border-radius: 9999px;
+  animation: pulseGlow 2s infinite;
+  box-shadow: 0 0 24px 0 #6366f1aa, 0 2px 16px 0 #3b82f655;
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.icon:nth-child(1) {
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2));
+}
+
+.icon:nth-child(1) svg {
+  color: #3b82f6;
+}
+
+.icon:nth-child(2) {
+  background: linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
+  animation-delay: 0.5s;
+}
+
+.icon:nth-child(2) svg {
+  color: #a855f7;
+}
+
+.icon:nth-child(3) {
+  background: linear-gradient(to right, rgba(236, 72, 153, 0.2), rgba(59, 130, 246, 0.2));
+  animation-delay: 1s;
+}
+
+.icon:nth-child(3) svg {
+  color: #ec4899;
+}
+
+.heading {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.gradientText {
+  background: linear-gradient(90deg, #4f8cff 0%, #a259e6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: brightness(1.2) saturate(1.2);
+}
+
+.gradientTextAlt {
+  background: linear-gradient(90deg, #6366f1 0%, #a21caf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: brightness(1.2) saturate(1.2);
+}
+
+.subtitle {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #374151;
+  text-shadow: 0 2px 8px #6366f122;
+}
+
+:global(.dark) .subtitle {
+  color: #d1d5db;
+  text-shadow: 0 2px 8px #0008;
+}
+
+.codeText {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.blueText {
+  color: #2563eb;
+}
+
+:global(.dark) .blueText {
+  color: #60a5fa;
+}
+
+.purpleText {
+  color: #7c3aed;
+}
+
+:global(.dark) .purpleText {
+  color: #a78bfa;
+}
+
+.greenText {
+  color: #059669;
+}
+
+:global(.dark) .greenText {
+  color: #34d399;
+}
+
+.description {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: #4b5563;
+  margin-bottom: 3rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.75;
+  font-weight: 400;
+  text-shadow: 0 2px 8px #6366f122;
+}
+
+:global(.dark) .description {
+  color: #9ca3af;
+  text-shadow: 0 2px 8px #0008;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(to right, #2563eb, #7c3aed, #db2777);
+  color: white;
+  padding: 1.25rem 2.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 2.5px solid #6366f1;
+  box-shadow: 0 0 24px #6366f1aa, 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.ctaButton:hover {
+  transform: scale(1.07);
+  background: linear-gradient(to right, #1d4ed8, #6d28d9, #be185d);
+  box-shadow: 0 0 32px #6366f1cc, 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-color: #a21caf;
+}
+
+.ctaButton svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.ctaButton:hover svg {
+  transform: translateY(0.35rem) scale(1.2);
+  color: #a21caf;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.scrollBox {
+  width: 2rem;
+  height: 3rem;
+  border: 2px solid #9ca3af;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+}
+
+:global(.dark) .scrollBox {
+  border-color: #4b5563;
+}
+
+.scrollDot {
+  width: 0.25rem;
+  height: 1rem;
+  background: linear-gradient(to bottom, #3b82f6, #7c3aed);
+  border-radius: 9999px;
+  margin-top: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+.floatingElement {
+  position: absolute;
+  border-radius: 9999px;
+  opacity: 0.7;
+  filter: blur(2.5px) brightness(1.2);
+  box-shadow: 0 0 16px 4px #a78bfa55, 0 0 32px 8px #3b82f655;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0.5rem);
+  }
+}
+
+.nameText {
+  color: #1e293b;
+  font-weight: 900;
+  text-shadow: 0 2px 8px #0002;
+}
+
+:global(.dark) .nameText {
+  color: #fff;
+  text-shadow: 0 2px 12px #0008;
+}
+
+.rainbowLetter:nth-child(1) { color: #ff6a00; animation: rainbow 3s infinite; }
+.rainbowLetter:nth-child(2) { color: #ee0979; animation: rainbow 3s 0.1s infinite; }
+.rainbowLetter:nth-child(3) { color: #3b82f6; animation: rainbow 3s 0.2s infinite; }
+.rainbowLetter:nth-child(4) { color: #43e97b; animation: rainbow 3s 0.3s infinite; }
+.rainbowLetter:nth-child(5) { color: #f7971e; animation: rainbow 3s 0.4s infinite; }
+.rainbowLetter:nth-child(6) { color: #00c6ff; animation: rainbow 3s 0.5s infinite; }
+.rainbowLetter:nth-child(7) { color: #f953c6; animation: rainbow 3s 0.6s infinite; }
+.rainbowLetter:nth-child(8) { color: #39ff14; animation: rainbow 3s 0.7s infinite; }
+
+@keyframes rainbow {
+  0%, 100% { filter: brightness(1.2) drop-shadow(0 2px 8px currentColor); }
+  50% { filter: brightness(2) drop-shadow(0 4px 16px currentColor); }
+} 

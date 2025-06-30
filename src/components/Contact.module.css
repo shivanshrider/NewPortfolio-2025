@@ -1,0 +1,222 @@
+.section {
+  padding: 5rem 1rem;
+  background: linear-gradient(to bottom, #000000, #111827);
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.gradientText {
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconContainer {
+  padding: 0.75rem;
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+  border-radius: 0.5rem;
+  color: #60a5fa;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactLabel {
+  color: white;
+  font-weight: 500;
+}
+
+.contactValue {
+  color: #d1d5db;
+}
+
+.contactLink {
+  color: #d1d5db;
+  transition: color 0.2s;
+}
+
+.contactLink:hover {
+  color: #60a5fa;
+}
+
+.socialSection {
+  margin-top: 2rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  padding: 1rem;
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 0.5rem;
+  color: #60a5fa;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+.socialLink:hover {
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.3), rgba(139, 92, 246, 0.3));
+}
+
+.formContainer {
+  background: linear-gradient(to bottom right, #1f2937, #111827);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  border: 1px solid #374151;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #d1d5db;
+  margin-bottom: 0.5rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 0.5rem;
+  color: white;
+  transition: all 0.2s;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #9ca3af;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #3b82f6, #7c3aed);
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: linear-gradient(to right, #2563eb, #6d28d9);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.statusMessage {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.successMessage {
+  composes: statusMessage;
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #34d399;
+}
+
+.errorMessage {
+  composes: statusMessage;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+} 

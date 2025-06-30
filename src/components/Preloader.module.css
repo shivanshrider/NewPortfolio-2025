@@ -1,0 +1,19 @@
+.container {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.logo {
+  font-size: clamp(3.75rem, 8vw, 6rem);
+  font-weight: 800;
+  background: linear-gradient(to right, #60a5fa, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  user-select: none;
+} 
