@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Text, Float } from '@react-three/drei'
 import styles from './DynamicBackground.module.css'
@@ -44,7 +44,7 @@ const MatrixRain = () => {
   const colors = ['#00ff99', '#00e6e6', '#3b82f6', '#39ff14', '#00ffcc', '#00bfff']
   return (
     <group>
-      {Array.from({ length: 80 }, (_, i) => (
+      {Array.from({ length: 30 }, (_, i) => (
         <CodeElement
           key={i}
           position={[
@@ -88,6 +88,7 @@ const DynamicBackground3D = () => {
         <pointLight position={[10, 10, 10]} intensity={1} />
         <pointLight position={[-10, -10, -10]} intensity={0.5} />
         <SpinningBox />
+        <MatrixRain />
       </Canvas>
       <div className={styles.scanlines} />
       <div className={styles.overlay} />

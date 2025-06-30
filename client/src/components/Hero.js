@@ -77,7 +77,10 @@ const Hero = () => {
           <h1 className={`hero-heading ${styles.heading}`}>
             Hey, I'm{' '}
             <span className={styles.nameText}>
-              <span className={styles.gradientText}>Shivansh</span>
+              {/* Rainbow effect for each letter */}
+              {'Shivansh'.split('').map((char, idx) => (
+                <span key={idx} className={styles.rainbowLetter}>{char}</span>
+              ))}
             </span>
           </h1>
           
