@@ -116,7 +116,7 @@ const Contact = () => {
             </span>
           </h2>
           <p className={styles.subtitle}>
-            Let's discuss your next project or just say hello!
+            Let&apos;s discuss your next project or just say hello!
           </p>
         </motion.div>
 

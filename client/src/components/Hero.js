@@ -75,7 +75,7 @@ const Hero = () => {
           {/* Removed iconContainer for a cleaner look */}
 
           <h1 className={`hero-heading ${styles.heading}`}>
-            Hey, I'm{' '}
+            Hey, I&apos;m{' '}
             <span className={styles.nameText}>
               {/* Rainbow effect for each letter */}
               {'Shivansh'.split('').map((char, idx) => (

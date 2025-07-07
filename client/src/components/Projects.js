@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ExternalLink, Github, X } from 'lucide-react'
 import styles from './Projects.module.css'
+import Image from 'next/image'
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
@@ -120,10 +121,12 @@ const Projects = () => {
             >
               {/* Project Image */}
               <div className={styles.projectImage}>
-                <img
+                <Image
                   src={project.image}
                   alt={project.title + ' screenshot'}
                   className={styles.image}
+                  width={600}
+                  height={400}
                 />
               </div>
 
@@ -204,10 +207,12 @@ const Projects = () => {
               </div>
 
               <div className={styles.modalBody}>
-                <img
+                <Image
                   src={selectedProject.image}
                   alt={selectedProject.title + ' screenshot'}
                   className={styles.modalImage}
+                  width={800}
+                  height={600}
                 />
                 <div className={styles.modalSection}>
                   <p className={styles.modalText}>
