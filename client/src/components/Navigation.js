@@ -39,7 +39,16 @@ const Navigation = () => {
         <div className={styles.header}>
           {/* Logo */}
           <div className={styles.logo}>
-            <span className={styles.logoText}>
+            <span className="logo" style={{
+              fontWeight: 700,
+              fontSize: '2rem',
+              color: '#5a6fff',
+              padding: '0.25em 0.75em',
+              background: 'rgba(0,0,0,0.25)',
+              borderRadius: '0.5em',
+              textShadow: '0 2px 8px rgba(0,0,0,0.7), 0 1px 0 #fff',
+              letterSpacing: '0.05em',
+            }}>
               ST
             </span>
           </div>

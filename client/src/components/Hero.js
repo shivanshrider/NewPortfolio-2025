@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { ChevronDown, Code, Zap, Sparkles } from 'lucide-react'
 import DynamicBackground from './DynamicBackground'
 import styles from './Hero.module.css'
+import HeroBackground from "./HeroBackground";
 
 const Hero = () => {
   const heroRef = useRef(null)
@@ -58,6 +59,7 @@ const Hero = () => {
 
   return (
     <section id="home" ref={heroRef} className={styles.heroSection}>
+      <HeroBackground />
       <div className={styles.heroOverlay}></div>
       {/* Dynamic 3D Background */}
       <div style={{position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 1, pointerEvents: 'none'}}>

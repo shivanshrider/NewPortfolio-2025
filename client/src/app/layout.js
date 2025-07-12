@@ -1,5 +1,6 @@
 import { Poppins, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import AnimatedBackground from '../components/AnimatedBackground'
 
 
 const poppins = Poppins({ 
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth dark">
       <body className={`${poppins.variable} ${jetbrainsMono.variable} antialiased bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300`}>
+        <AnimatedBackground />
         {children}
       </body>
     </html>

@@ -274,17 +274,17 @@
   background: linear-gradient(to right, #60a5fa, #a78bfa);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: #fff; /* fallback for browsers that don't support background-clip */
   font-weight: 900;
-  text-shadow: none;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
 :global(.dark) .nameText {
   background: linear-gradient(to right, #60a5fa, #a78bfa);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
-  text-shadow: none;
+  color: #fff;
+  text-shadow: 0 2px 8px #0008;
 }
 
 .rainbowLetter:nth-child(1),
